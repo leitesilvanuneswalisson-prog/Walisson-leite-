@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>50 Receitas Fit Explosivas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Reset e configurações básicas */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.header {
+    background-color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo {
+    text-align: center;
+}
+
+.logo-img {
+    height: 60px;
+    width: auto;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 60px 0;
+}
+
+.social-proof {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.social-proof p {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 40px;
+    line-height: 1.2;
+    color: #2c3e50;
+}
+
+.fire-emoji {
+    font-size: 4rem;
+    margin-right: 10px;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    color: #555;
+    line-height: 1.5;
+}
+
+.cta-button {
+    background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+    color: white;
+    border: none;
+    padding: 18px 40px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(255, 107, 53, 0.4);
+}
+
+.cta-button.large {
+    padding: 22px 50px;
+    font-size: 1.2rem;
+}
+
+.offer-info {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.offer-info p {
+    margin-bottom: 10px;
+}
+
+.urgency {
+    color: #dc3545;
+    font-style: italic;
+}
+
+.hero-image {
+    text-align: center;
+}
+
+.book-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+}
+
+/* Problems Section */
+.problems {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+}
+
+.problems h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.section-intro {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 50px;
+    color: #666;
+}
+
+.problems-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.problem-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    padding: 25px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.problem-item:hover {
+    transform: translateY(-5px);
+}
+
+.problem-icon {
+    font-size: 1.5rem;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.problem-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.problems-conclusion {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 50px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+/* Solution Section */
+.solution {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    color: white;
+}
+
+.solution h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cooking-emoji {
+    font-size: 2.5rem;
+}
+
+.solution-intro {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 60px;
+    opacity: 0.9;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.benefit-card {
+    background: rgba(255,255,255,0.1);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+    transition: transform 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+}
+
+.benefit-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.benefit-card p {
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.testimonials h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.testimonials-intro {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 60px;
+    color: #666;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.testimonial-card {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 15px;
+    border-left: 5px solid #28a745;
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+.testimonial-card blockquote {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-style: italic;
+    color: #555;
+}
+
+.testimonial-author strong {
+    color: #2c3e50;
+    font-weight: 700;
+}
+
+.testimonial-author span {
+    display: block;
+    color: #28a745;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+/* Final CTA Section */
+.final-cta {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    color: white;
+    text-align: center;
+}
+
+.final-cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.final-benefits {
+    margin-bottom: 40px;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.check-icon {
+    color: #28a745;
+    font-size: 1.5rem;
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+.guarantee {
+    margin-top: 30px;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .fire-emoji {
+        font-size: 3rem;
+    }
+    
+    .problems h2,
+    .solution h2,
+    .testimonials h2,
+    .final-cta h2 {
+        font-size: 2rem;
+    }
+    
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .fire-emoji {
+        font-size: 2.5rem;
+    }
+    
+    .cta-button {
+        padding: 15px 30px;
+        font-size: 1rem;
+    }
+    
+    .cta-button.large {
+        padding: 18px 35px;
+        font-size: 1.1rem;
+    }
+}
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="logo.png" alt="ConquistaFit Logo" class="logo-img">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="social-proof">
+                    <p>Junte-se a mais de 5.000 pessoas</p>
+                </div>
+                
+                <h1 class="hero-title">
+                    <span class="fire-emoji">🔥</span> 50 Receitas Fit Explosivas para você emagrecer sem abrir mão do sabor!
+                </h1>
+                
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <p class="hero-subtitle">Receba grátis no seu WhatsApp o guia completo com 50 receitas rápidas, saudáveis e deliciosas.</p>
+                        
+                        <button class="cta-button primary" onclick="scrollToForm()">
+                            PEGAR MINHAS RECEITAS AGORA
+                        </button>
+                        
+                        <div class="offer-info">
+                            <p><strong>Normalmente R$47, hoje GRÁTIS para você.</strong></p>
+                            <p class="urgency">Esta oferta gratuita pode sair do ar a qualquer momento.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-image">
+                        <img src="livro-receitas.png" alt="50 Receitas Fit Explosivas - Livro" class="book-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="problems">
+            <div class="container">
+                <h2>Cansado(a) de dietas sem graça que você não consegue seguir?</h2>
+                <p class="section-intro">Se você se identifica com algum dos pontos abaixo, você está no lugar certo.</p>
+                
+                <div class="problems-list">
+                    <div class="problem-item">
+                        <span class="problem-icon">❌</span>
+                        <div class="problem-text">
+                            <strong>Comida sem sabor</strong> que te faz desistir na primeira semana e atacar a geladeira à noite.
+                        </div>
+                    </div>
+                    
+                    <div class="problem-item">
+                        <span class="problem-icon">❌</span>
+                        <div class="problem-text">
+                            <strong>Perder horas na cozinha</strong> com receitas complicadas que não se encaixam na sua rotina corrida.
+                        </div>
+                    </div>
+                    
+                    <div class="problem-item">
+                        <span class="problem-icon">❌</span>
+                        <div class="problem-text">
+                            <strong>Falta de opções práticas</strong> para o café da manhã, almoço e jantar, te fazendo recorrer ao delivery.
+                        </div>
+                    </div>
+                    
+                    <div class="problem-item">
+                        <span class="problem-icon">❌</span>
+                        <div class="problem-text">
+                            <strong>O sentimento de frustração</strong> por tentar várias dietas e nunca alcançar o resultado que você deseja.
+                        </div>
+                    </div>
+                </div>
+                
+                <p class="problems-conclusion">Continuar nesse ciclo não vai te levar a lugar nenhum. É hora de uma solução que funciona de verdade.</p>
+            </div>
+        </section>
+
+        <section class="solution">
+            <div class="container">
+                <h2>A Solução Definitiva para Comer Bem e Emagrecer sem Sofrer <span class="cooking-emoji">🍳🔥</span></h2>
+                <p class="solution-intro">Este não é apenas um guia, é seu passaporte para uma transformação real. Um material 100% gratuito, feito para quem quer resultados.</p>
+                
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <h3>Receitas Fáceis e Rápidas (Até 20 min)</h3>
+                        <p>Prepare refeições incríveis em minutos. Perfeito para quem tem uma rotina corrida e não quer perder tempo.</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <h3>Sabor de Verdade</h3>
+                        <p>Descubra que comida saudável pode (e deve) ser deliciosa. Chega de pratos sem graça e sem cor!</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <h3>Foco em Emagrecimento</h3>
+                        <p>Todas as receitas são pensadas para acelerar seu metabolismo e otimizar a queima de gordura de forma saudável.</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <h3>Acesso Vitalício no seu Celular</h3>
+                        <p>Receba o guia no seu WhatsApp e tenha acesso para sempre, na palma da sua mão, quando e onde quiser.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <div class="container">
+                <h2>Elas seguiram as receitas e transformaram suas vidas</h2>
+                <p class="testimonials-intro">Veja o que nossas alunas estão dizendo sobre o guia.</p>
+                
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <blockquote>
+                            "Em apenas 2 semanas consegui manter a dieta sem sofrimento. As receitas são práticas, deliciosas e me ajudaram a eliminar os primeiros 3kg! É uma mudança de vida."
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <strong>Maria S.</strong>
+                            <span>Resultado em 14 dias</span>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <blockquote>
+                            "Finalmente encontrei receitas que toda a minha família adora! Perdi 5kg sem nem sentir que estava de dieta. Super recomendo para todas as mães ocupadas!"
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <strong>Juliana P.</strong>
+                            <span>Perdeu 5kg em 1 mês</span>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <blockquote>
+                            "Eu odiava cozinhar, mas essas receitas são tão rápidas e fáceis que até eu me arrisco. O melhor é ver os resultados na balança e no espelho. Já se foram 7kg!"
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <strong>Carlos F.</strong>
+                            <span>Menos 7kg em 6 semanas</span>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <blockquote>
+                            "A variedade é incrível. Tem opções para o café, almoço e jantar. Nunca mais passei aperto na hora de decidir o que comer. Minha disposição melhorou 100%."
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <strong>Ana L.</strong>
+                            <span>Mais energia e foco</span>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <blockquote>
+                            "O material é direto ao ponto e muito prático. Receber no WhatsApp facilitou tudo. As receitas com frango são as minhas favoritas, muito saborosas!"
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <strong>Ricardo M.</strong>
+                            <span>Rotina alimentar transformada</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="final-cta" id="form-section">
+            <div class="container">
+                <h2>Sua transformação começa AGORA. Receba o acesso gratuito.</h2>
+                
+                <div class="final-benefits">
+                    <div class="benefit-item">
+                        <span class="check-icon">✓</span>
+                        <span>50 Receitas Fit Explosivas</span>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="check-icon">✓</span>
+                        <span>Acesso Imediato no WhatsApp</span>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="check-icon">✓</span>
+                        <span>100% Gratuito (Por tempo limitado)</span>
+                    </div>
+                </div>
+                
+                <button class="cta-button primary large">
+                    PEGAR MINHAS RECEITAS AGORA
+                </button>
+                
+                <p class="guarantee">Sem pegadinhas, sem cartão de crédito. Acesso 100% gratuito.</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Função para rolar suavemente até o formulário
+function scrollToForm() {
+    const formSection = document.getElementById('form-section');
+    if (formSection) {
+        formSection.scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start'
+        });
+    }
+}
+
+// Adicionar efeitos de hover e animações
+document.addEventListener('DOMContentLoaded', function() {
+    // Animação de entrada para os elementos
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+
+    // Aplicar animação aos elementos
+    const animatedElements = document.querySelectorAll('.problem-item, .benefit-card, .testimonial-card');
+    animatedElements.forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(el);
+    });
+
+    // Efeito de contagem regressiva (simulado)
+    let timeLeft = 3600; // 1 hora em segundos
+    
+    function updateCountdown() {
+        const hours = Math.floor(timeLeft / 3600);
+        const minutes = Math.floor((timeLeft % 3600) / 60);
+        const seconds = timeLeft % 60;
+        
+        // Se houver um elemento de countdown na página, atualizar
+        const countdownElement = document.getElementById('countdown');
+        if (countdownElement) {
+            countdownElement.textContent = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        }
+        
+        if (timeLeft > 0) {
+            timeLeft--;
+        }
+    }
+    
+    // Atualizar countdown a cada segundo
+    setInterval(updateCountdown, 1000);
+
+    // Adicionar efeito de pulso aos botões CTA
+    const ctaButtons = document.querySelectorAll('.cta-button');
+    ctaButtons.forEach(button => {
+        button.addEventListener('mouseenter', function() {
+            this.style.animation = 'pulse 0.6s ease-in-out';
+        });
+        
+        button.addEventListener('animationend', function() {
+            this.style.animation = '';
+        });
+    });
+
+    // Adicionar evento de clique aos botões CTA
+    ctaButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Simular ação de cadastro (aqui você conectaria com um serviço real)
+            alert('Funcionalidade de cadastro seria implementada aqui!\n\nEm uma implementação real, isso abriria um formulário ou redirecionaria para WhatsApp.');
+            
+            // Ou redirecionar para WhatsApp (exemplo)
+            // window.open('https://wa.me/5511999999999?text=Quero%20receber%20as%2050%20receitas%20fit%20gratuitas!', '_blank');
+        });
+    });
+});
+
+// Adicionar CSS para animação de pulso
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+        100% { transform: scale(1); }
+    }
+    
+    .fade-in {
+        animation: fadeIn 0.6s ease-in-out;
+    }
+    
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+`;
+document.head.appendChild(style);
+    </script>
+</body>
+</html>
+
